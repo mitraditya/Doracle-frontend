@@ -3,9 +3,11 @@ import classes from './App.module.css';
 //import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import ChooseForm from './ChooseForm';
-import PatientForm from './PatientForm';
-import HospitalForm from './HospitalForm';
+import ChooseForm from './Login/ChooseForm';
+import PatientForm from './Login/PatientForm';
+import HospitalForm from './Login/HospitalForm';
+import DisplayPatients from './Hospital/DisplayAllPatients';
+import NavbarHospital from './Hospital/NavbarHospital';
 
 class App extends React.Component {
 
@@ -17,6 +19,10 @@ class App extends React.Component {
             <Route path="/" exact component={ChooseForm}/>
             <Route path="/patientlogin" exact component={PatientForm}/>
             <Route path="/hospitallogin" exact component={HospitalForm}/>
+          </Switch>
+          {/* <NavbarHospital/> */}
+          <Switch>
+            <Route path="/hospital/displaypatients" exact component={DisplayPatients}/>
           </Switch>
         </div>
       </Router>
