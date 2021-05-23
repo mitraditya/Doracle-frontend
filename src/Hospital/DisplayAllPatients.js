@@ -21,7 +21,7 @@ class DisplayPatients extends React.Component {
     });
     return (
       <div style={{marginTop:'10em'}}>
-        <h1>List of Patients:</h1>
+        <h1>LIST OF PATIENTS:</h1>
         <Table striped bordered hover variant="dark">
           <thead>
             <tr>

@@ -21,7 +21,7 @@ class HospitalForm extends React.Component {
                 <form style={{marginTop:'10em'}} onSubmit = {this.handleSubmit} >
                     <label className={classes.formLabel}>Hospital ID</label><br/>
                     <input className={classes.formInput} type="text" name="HospitalID"  value={this.state.HospitalID}  
-                    onChange={this.handleChange} /> <br/>
+                    onChange={this.handleChange} /> <br/><br/>
 
                     <label className={classes.formLabel}>Password</label><br/>
                     <input className={classes.formInput} type="password" name="Password" value= {this.state.Password} 

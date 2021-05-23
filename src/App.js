@@ -7,7 +7,8 @@ import ChooseForm from './Login/ChooseForm';
 import PatientForm from './Login/PatientForm';
 import HospitalForm from './Login/HospitalForm';
 import DisplayPatients from './Hospital/DisplayAllPatients';
-import NavbarHospital from './Hospital/NavbarHospital';
+import AddPatient from './Hospital/AddPatient';
+//import NavbarHospital from './Hospital/NavbarHospital';
 
 class App extends React.Component {
 
@@ -23,6 +24,7 @@ class App extends React.Component {
           {/* <NavbarHospital/> */}
           <Switch>
             <Route path="/hospital/displaypatients" exact component={DisplayPatients}/>
+            <Route path="/hospital/addpatient" exact component={AddPatient}/>
           </Switch>
         </div>
       </Router>

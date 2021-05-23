@@ -22,7 +22,7 @@ class PatientForm extends React.Component {
                 <form style={{marginTop:'10em'}} onSubmit = {this.handleSubmit} >
                     <label className={classes.formLabel}>Patient ID</label><br/>
                     <input className={classes.formInput} type="text" name="PatientID"  value={this.state.PatientID}  
-                    onChange={this.handleChange} /> <br/>
+                    onChange={this.handleChange} /> <br/><br/>
 
                     <label className={classes.formLabel}>Password</label><br/>
                     <input className={classes.formInput} type="password" name="Password" value= {this.state.Password} 
