@@ -1,11 +1,10 @@
 import React from 'react';
 import classes from './Form.module.css';
 
-class PatientForm extends React.Component {
-
+class HospitalForm extends React.Component {
     constructor(props){
         super(props);
-        this.state = {PatientID: "", Password: ""}
+        this.state = {HospitalID: "", Password: ""}
     }
 
     handleSubmit = (event) => {
@@ -20,8 +19,8 @@ class PatientForm extends React.Component {
         return(
             <div>
                 <form style={{marginTop:'10em'}} onSubmit = {this.handleSubmit} >
-                    <label className={classes.formLabel}>Patient ID</label><br/>
-                    <input className={classes.formInput} type="text" name="PatientID"  value={this.state.PatientID}  
+                    <label className={classes.formLabel}>Hospital ID</label><br/>
+                    <input className={classes.formInput} type="text" name="HospitalID"  value={this.state.HospitalID}  
                     onChange={this.handleChange} /> <br/>
 
                     <label className={classes.formLabel}>Password</label><br/>
@@ -35,4 +34,4 @@ class PatientForm extends React.Component {
     }
 }
 
-export default PatientForm;
+export default HospitalForm;
