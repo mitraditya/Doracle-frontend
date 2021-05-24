@@ -9,6 +9,8 @@ import HospitalForm from './Login/HospitalForm';
 import DisplayPatients from './Hospital/DisplayAllPatients';
 import AddPatient from './Hospital/AddPatient';
 import PatientDetails from './PatientDetails';
+import Requirements from './ViewRequirements';
+import UpdateProfile from './PatientProfile';
 //import NavbarHospital from './Hospital/NavbarHospital';
 
 class App extends React.Component {
@@ -17,18 +19,18 @@ class App extends React.Component {
     return (
       <Router>
         <div className={classes.App}>
+        {/* <NavbarHospital/> */}
           <Switch>
             <Route path="/" exact component={ChooseForm}/>
             <Route path="/patientlogin" exact component={PatientForm}/>
             <Route path="/hospitallogin" exact component={HospitalForm}/>
-          </Switch>
-          {/* <NavbarHospital/> */}
-          <Switch>
+            <Switch>
             <Route path="/hospital/displaypatients" exact component={DisplayPatients}/>
             <Route path="/hospital/addpatient" exact component={AddPatient}/>
-          </Switch>
-          <Switch>
             <Route path="/:patientid" exact component={PatientDetails}/>
+            <Route path="/:patientid/requirements" exact component={Requirements}/>
+            <Route path="/:patientid/profile" exact component={UpdateProfile}/>
+            </Switch>
           </Switch>
         </div>
       </Router>
