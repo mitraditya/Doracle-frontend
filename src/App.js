@@ -8,6 +8,7 @@ import PatientForm from './Login/PatientForm';
 import HospitalForm from './Login/HospitalForm';
 import DisplayPatients from './Hospital/DisplayAllPatients';
 import AddPatient from './Hospital/AddPatient';
+import PatientDetails from './PatientDetails';
 //import NavbarHospital from './Hospital/NavbarHospital';
 
 class App extends React.Component {
@@ -25,6 +26,9 @@ class App extends React.Component {
           <Switch>
             <Route path="/hospital/displaypatients" exact component={DisplayPatients}/>
             <Route path="/hospital/addpatient" exact component={AddPatient}/>
+          </Switch>
+          <Switch>
+            <Route path="/:patientid" exact component={PatientDetails}/>
           </Switch>
         </div>
       </Router>
