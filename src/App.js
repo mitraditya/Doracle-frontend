@@ -28,7 +28,7 @@ import PatientLanding from "./PatientPortal/PatientLanding";
 import PatientDetail from "./PatientPortal/PatientDetail";
 import PatientStatus from "./PatientPortal/PatientStatus";
 import PatientRequirement from "./PatientPortal/PatientRequirement";
-
+import ResetPassword from "./PatientPortal/ResetPassword";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -62,14 +62,14 @@ class App extends React.Component {
         
         <Route exact path="/" component={ChooseForm} />
            <Route exact path="/patientlogin" component={Login} />
-           {/* <Route path="/hospitallogin" exact component={HospitalForm}/> */}
+           <Route path="/hospitallogin" exact component={HospitalForm}/>
            <Switch>
              <PrivateRoute exact path="/patient" component={PatientLanding} />
              <PrivateRoute path="/patient/:patientid" exact component={PatientDetail}/>
             <PrivateRoute path="/patient/:patientid/status"exact component={PatientStatus}/>
             <PrivateRoute path="/patient/:patientid/requirements" exact component={PatientRequirement}/>
             <PrivateRoute path="/patient/:patientid/update" exact component={UpdateProfile}/>
-
+            <PrivateRoute path="/patient/:patientid/password-reset" exact component={ResetPassword}/>
            </Switch>
         
           

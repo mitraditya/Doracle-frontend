@@ -2,6 +2,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
 
+
 class PatientDetail extends React.Component {
     constructor(props){
         super(props);
@@ -32,7 +33,6 @@ class PatientDetail extends React.Component {
                 <h5>Contact - {this.state.contact}</h5>
                 <h5>Patient ID - {this.state.patientid}</h5>
                 <h5>Email - {this.state.email}</h5>
-               
                 
                 {/* <h3>PATIENT LOG:</h3>
                  

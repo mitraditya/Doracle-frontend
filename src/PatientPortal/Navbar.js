@@ -27,7 +27,9 @@ export class Navbar extends Component {
                         <li className="navbar-item">
                             <Link to={"/patient/"+user.patientID+"/update"} className="nav-link" style={{color: "white"}}>Update</Link>
                         </li>
-                      
+                        <li className="navbar-item">
+                            <Link to={"/patient/"+user.patientID+"/password-reset"} className="nav-link" style={{color: "white"}}>Reset Password</Link>
+                        </li>
                         <li className="navbar-item">
                             <Link to={"/patient/"+user.patientID+"/status"} className="nav-link"  style={{color: "white"}}>Status</Link>
                         </li>
