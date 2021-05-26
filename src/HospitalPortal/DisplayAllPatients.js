@@ -2,7 +2,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DisplayPatientsTableRow from './DisplayAllPatientsTableRow'
-
+import Navbar from './Navbar'
 class DisplayPatients extends React.Component {
   state = { AllPatients: [] };
   componentDidMount() {
@@ -21,7 +21,9 @@ class DisplayPatients extends React.Component {
       );
     });
     return (
-      <div style={{marginTop:'5em'}} className="container">
+      <div>
+        <Navbar></Navbar>
+        <div style={{marginTop:'5em'}} className="container">
         <h1>LIST OF PATIENTS:</h1>
         <Table striped bordered hover variant="dark">
           <thead>
@@ -34,6 +36,7 @@ class DisplayPatients extends React.Component {
           </thead>
           <tbody>{display}</tbody>
         </Table>
+        </div>
       </div>
     );
   }

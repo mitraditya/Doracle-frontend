@@ -15,8 +15,6 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ChooseForm from './Login/ChooseForm';
-import PatientForm from './Login/PatientForm';
-import HospitalForm from './Login/HospitalForm';
 import DisplayPatients from './HospitalPortal/DisplayAllPatients';
 import AddPatient from './HospitalPortal/AddPatient';
 import PatientDetails from './HospitalPortal/PatientDetails';
@@ -29,6 +27,7 @@ import PatientDetail from "./PatientPortal/PatientDetail";
 import PatientStatus from "./PatientPortal/PatientStatus";
 import PatientRequirement from "./PatientPortal/PatientRequirement";
 import ResetPassword from "./PatientPortal/ResetPassword";
+import HospitalLogin from './components/auth/HospitalLogin';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -62,24 +61,26 @@ class App extends React.Component {
         
         <Route exact path="/" component={ChooseForm} />
            <Route exact path="/patientlogin" component={Login} />
-           <Route path="/hospitallogin" exact component={HospitalForm}/>
+           <Route path="/hospitallogin" exact component={HospitalLogin}/>
            <Switch>
-             <PrivateRoute exact path="/patient" component={PatientLanding} />
-             <PrivateRoute path="/patient/:patientid" exact component={PatientDetail}/>
+            <PrivateRoute exact path="/patient" component={PatientLanding} />
+            <PrivateRoute path="/patient/:patientid" exact component={PatientDetail}/>
             <PrivateRoute path="/patient/:patientid/status"exact component={PatientStatus}/>
             <PrivateRoute path="/patient/:patientid/requirements" exact component={PatientRequirement}/>
             <PrivateRoute path="/patient/:patientid/update" exact component={UpdateProfile}/>
             <PrivateRoute path="/patient/:patientid/password-reset" exact component={ResetPassword}/>
+            <PrivateRoute exact path="/hospital" exact component={HospitalLanding}/>
+            <PrivateRoute path="/hospital/displaypatients" exact component={DisplayPatients}/>
+            <PrivateRoute path="/hospital/addpatient" exact component={AddPatient}/>
+            <PrivateRoute path="/hospital/:patientid" exact component={PatientDetails}/>
+            <PrivateRoute path="/hospital/:patientid/addStatus"exact component={AddPatientStatus}/>
+            <PrivateRoute path="/hospital/:patientid/requirements" exact component={Requirements}/>
+
+          
            </Switch>
         
           
             <Switch>
-            <Route path="/hospital" exact component={HospitalLanding}></Route>
-            <Route path="/hospital/displaypatients" exact component={DisplayPatients}/>
-            <Route path="/hospital/addpatient" exact component={AddPatient}/>
-            <Route path="/hospital/:patientid" exact component={PatientDetails}/>
-            <Route path="/hospital/:patientid/addStatus"exact component={AddPatientStatus}></Route>
-            <Route path="/hospital/:patientid/requirements" exact component={Requirements}/>
                     
           </Switch>
          
