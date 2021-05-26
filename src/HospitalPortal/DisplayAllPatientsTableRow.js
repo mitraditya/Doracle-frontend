@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from 'react-router-dom';
 
 class DisplayPatientsTableRow extends React.Component {
     constructor(props){
@@ -9,13 +10,16 @@ class DisplayPatientsTableRow extends React.Component {
     
   componentDidMount() {
           if (
+            
             this.props.healthstatus === null ||
             this.props.healthstatus === undefined ||
             this.props.healthstatus.length === 0
           ){
+            console.log("if block");
               this.setState({status: "Not updated yet"})
           }
           else {
+            console.log("else block");
             fetch(
               `http://localhost:4000/hospital/${this.props.itemid}/status/${
                 this.props.healthstatus[this.props.healthstatus.length - 1]
@@ -34,7 +38,7 @@ class DisplayPatientsTableRow extends React.Component {
       //console.log(this.state.status);
       return (
         <tr>
-          <td>{this.props.index}</td>
+          <td><Link to={"/hospital/"+this.props.patientid}  style={{color: "white"}}>{this.props.patientid}</Link></td>
           <td>{this.props.name}</td>
           <td>{this.state.status}</td>
           <td>{this.props.contact}</td>

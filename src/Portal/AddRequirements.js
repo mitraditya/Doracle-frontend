@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Login/Form.module.css';
+import classes from '../Login/Form.module.css';
 
 class AddRequirements extends React.Component {
     constructor(props){
@@ -10,7 +10,9 @@ class AddRequirements extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         let current = new Date();
-        let time = current.toLocaleString()
+        let time = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+(current.getDate()) +"-"+ current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+        
+        
         fetch(`http://localhost:4000/hospital/${this.props.id}/pharmacy`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},

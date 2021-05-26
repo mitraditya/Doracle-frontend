@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './Login/Form.module.css';
-
+import classes from '../Login/Form.module.css';
+import Navbar from "./Navbar";
 class UpdateProfile extends React.Component {
     constructor(props){
         super(props);
@@ -26,6 +26,8 @@ class UpdateProfile extends React.Component {
                     console.log(json);
                     alert(json);
                 })
+
+                window.location='/patient/'
     }
     handleChange = (event) => {
         this.setState({ [event.target.name]: event.target.value})
@@ -33,6 +35,7 @@ class UpdateProfile extends React.Component {
     render(){
         return(
             <div>
+                <Navbar></Navbar>
                 <h1>UPDATE YOUR DETAILS:</h1>
                 <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
                     <label className={classes.formLabel}>First Name</label><br/>

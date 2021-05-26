@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Login/Form.module.css';
+import classes from '../Login/Form.module.css';
 
 class AddPatientStatus extends React.Component {
     constructor(props){
@@ -10,7 +10,8 @@ class AddPatientStatus extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         let current = new Date();
-        let time = current.toLocaleString()
+        let time = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+(current.getDate()) +"-"+ current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+        console.log(this.props.id);
         fetch(`http://localhost:4000/hospital/${this.props.id}/status`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
