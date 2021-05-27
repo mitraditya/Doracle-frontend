@@ -28,6 +28,7 @@ import PatientStatus from "./PatientPortal/PatientStatus";
 import PatientRequirement from "./PatientPortal/PatientRequirement";
 import ResetPassword from "./PatientPortal/ResetPassword";
 import HospitalLogin from './components/auth/HospitalLogin';
+import UploadData from './HospitalPortal/UploadData';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -70,6 +71,7 @@ class App extends React.Component {
               <PrivateRoute exact path="/hospital" exact component={HospitalLanding}/>
               <PrivateRoute path="/hospital/displaypatients" exact component={DisplayPatients}/>
               <PrivateRoute path="/hospital/addpatient" exact component={AddPatient}/>
+              <PrivateRoute path="/hospital/uploaddata" exact component={UploadData}/>
               <PrivateRoute path="/hospital/:patientid" exact component={PatientDetails}/>
               <PrivateRoute path="/hospital/:patientid/addStatus"exact component={AddPatientStatus}/>
               <PrivateRoute path="/hospital/:patientid/requirements" exact component={Requirements}/>

@@ -25,6 +25,9 @@ export class Navbar extends Component {
                         <li className="navbar-item">
                             <Link to="/hospital/addpatient" className="nav-link" style={{color: "white"}}>Create Patient</Link>
                         </li>
+                        <li className="navbar-item">
+                            <Link to="/hospital/uploaddata" className="nav-link" style={{color: "white"}}>Upload Patient Database</Link>
+                        </li>
                         <Link to="http://localhost:3000"><button
                         onClick={this.onLogoutClick}
                         className="btn btn-large waves-effect waves-light hoverable blue accent-3"

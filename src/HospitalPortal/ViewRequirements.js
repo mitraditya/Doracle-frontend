@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ViewRequirementsTableRow from '../Portal/ViewRequirementTableRow';
 import AddRequirements from '../Portal/AddRequirements';
 import Navbar from "./Navbar";
+
 class Requirements extends React.Component {
     constructor(props){
         super(props);
@@ -28,13 +29,13 @@ class Requirements extends React.Component {
         return (
 
             <div>
-                <Navbar></Navbar>
-                <div className="container">
+                <Navbar/>
+                <div style={{marginTop: '2em'}} className="container">
                 <h5>Name - {this.state.name}</h5>
                 <h5>Contact - {this.state.contact}</h5>
                 <h5>Patient ID - {this.state.patientid}</h5>
                 <h5>Email - {this.state.email}</h5>
-                <h3><strong>REQUIREMENT LOG:</strong></h3>
+                <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3>
                 <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
