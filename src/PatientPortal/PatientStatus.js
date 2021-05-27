@@ -50,7 +50,7 @@ class PatientStatus extends React.Component {
                  
                <br></br>
                
-                <Table striped bordered hover>
+                <Table responsive="md" striped bordered hover>
                 <thead>
                     <tr>
                     <th>Date</th>
