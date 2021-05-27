@@ -6,7 +6,7 @@ export class HospitalLanding extends Component {
             
             <div>
                 <Navbar/>
-                <h1>Welcome to hospital Dashboard</h1>
+                <h1 style={{marginTop:'2em'}}>Welcome to the Dashboard!</h1>
             </div>
             
         )

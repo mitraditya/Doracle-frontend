@@ -15,11 +15,9 @@ class DisplayPatientsTableRow extends React.Component {
             this.props.healthstatus === undefined ||
             this.props.healthstatus.length === 0
           ){
-            console.log("if block");
               this.setState({status: "Not updated yet"})
           }
           else {
-            console.log("else block");
             fetch(
               `http://localhost:4000/hospital/${this.props.itemid}/status/${
                 this.props.healthstatus[this.props.healthstatus.length - 1]
@@ -30,11 +28,11 @@ class DisplayPatientsTableRow extends React.Component {
                 this.setState({status: data1.note})
               });
           }
-          //console.log(temp);
-          
   }
 
   render() {
+    if(this.props.role)
+    return null;
       //console.log(this.state.status);
       return (
         <tr>

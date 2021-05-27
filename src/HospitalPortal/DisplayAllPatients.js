@@ -14,10 +14,11 @@ class DisplayPatients extends React.Component {
   }
 
   render() {
+    console.log(this.state.AllPatients)
     const display = this.state.AllPatients.map((item, pos) => {
       console.log(item);
       return (
-          <DisplayPatientsTableRow key={pos} patientid={item.patientID} itemid={item.id} index={pos+1} name={item.firstname + " " + item.lastname} healthstatus={item.curr_status} contact={item.contact} />
+          <DisplayPatientsTableRow role={item.role} key={pos} patientid={item.patientID} itemid={item.id} index={pos+1} name={item.firstname + " " + item.lastname} healthstatus={item.curr_status} contact={item.contact} />
       );
     });
     return (

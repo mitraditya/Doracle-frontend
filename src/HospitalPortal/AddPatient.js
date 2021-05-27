@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
+import Navbar from './Navbar'
 
 class AddPatient extends React.Component {
     constructor(props){
@@ -32,7 +33,8 @@ class AddPatient extends React.Component {
     render(){
         return(
             <div>
-                <h1>ADD A NEW PATIENT:</h1>
+                <Navbar/>
+                <h1 style={{marginTop:'2em'}}>ADD A NEW PATIENT:</h1>
                 <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
                     <label className={classes.formLabel}>First Name</label><br/>
                     <input className={classes.formInput} type="text" name="firstname"  value={this.state.firstname}  

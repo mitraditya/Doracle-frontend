@@ -31,23 +31,21 @@ class PatientDetails extends React.Component {
             
             <div>
                 <Navbar></Navbar>
-                <div className="container">
+                <div style={{marginTop: '2em'}} className="container">
                 <h5>Name - {this.state.name}</h5>
                 <h5>Contact - {this.state.contact}</h5>
                 <h5>Patient ID - {this.state.patientid}</h5>
                 <h5>Email - {this.state.email}</h5>
-                <div>
-            
-                <Link to={"/hospital/"+this.state.patientid+"/requirements"} className="btn btn-danger">Add Requirement</Link>
-                &nbsp;&nbsp;&nbsp;&nbsp;        
-                <Link to="#" className="btn btn-info">Reports</Link>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to="#" className="btn btn-success">Previous Records</Link>
 
-
+                <div style={{marginTop: '2em'}}>
+                    <Link to={"/hospital/"+this.state.patientid+"/requirements"} className="btn btn-danger">Add Requirement</Link>
+                    &nbsp;&nbsp;&nbsp;&nbsp;        
+                    <Link to="#" className="btn btn-info">Reports</Link>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <Link to="#" className="btn btn-success">Previous Records</Link>
                 </div>
                 
-                <h3>PATIENT LOG:</h3>
+                <h3 style={{marginTop: '2em'}}>PATIENT LOG:</h3>
                  
                <br></br>
                

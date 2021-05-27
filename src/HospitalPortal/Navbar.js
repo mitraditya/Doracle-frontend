@@ -16,7 +16,7 @@ export class Navbar extends Component {
         const { user } = this.props.auth;
         return (
             <nav className="navbar navber-dark bg-dark navbar-expand-lg">
-                <Link to="/" className="navbar-brand"  style={{color: "white"}}>Doracle</Link>
+                <Link to="/hospital" className="navbar-brand"  style={{color: "white"}}>Doracle</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-item">
