@@ -18,7 +18,7 @@ export class Navbar extends Component {
 
         return (
             <nav className="navbar navber-dark bg-dark navbar-expand-lg">
-                <Link to="/" className="navbar-brand"  style={{color: "white"}}>Doracle</Link>
+                <Link to="/patient" className="navbar-brand"  style={{color: "white"}}>Doracle</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-item">

@@ -28,7 +28,7 @@ class PatientDetail extends React.Component {
             
             <div>
                 <Navbar></Navbar>
-                <div className="container">
+                <div style={{marginTop: '2em'}} className="container">
                 <h5>Name - {this.state.name}</h5>
                 <h5>Contact - {this.state.contact}</h5>
                 <h5>Patient ID - {this.state.patientid}</h5>

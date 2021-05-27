@@ -6,9 +6,8 @@ export class PatientLanding extends Component {
        
         return (
             <div>
-                <Navbar></Navbar>
-                <h1>Welcome to Patient Dashboard </h1>
-              
+                <Navbar/>
+                <h1 style={{marginTop: '2em'}}>Welcome to Patient Dashboard!</h1>
             </div>
         )
     }

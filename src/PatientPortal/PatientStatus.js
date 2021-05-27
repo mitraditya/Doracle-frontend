@@ -28,7 +28,7 @@ class PatientStatus extends React.Component {
         return (
             
             <div>
-                <Navbar></Navbar>
+                <Navbar/>
                 <div className="container">
                 {/* <h5>Name - {this.state.name}</h5>
                 <h5>Contact - {this.state.contact}</h5>
@@ -46,7 +46,7 @@ class PatientStatus extends React.Component {
 
                 </div> */}
                 
-                <h3>PATIENT LOG:</h3>
+                <h3 style={{marginTop: '2em'}}><strong>PATIENT LOG:</strong></h3>
                  
                <br></br>
                

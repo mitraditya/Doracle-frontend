@@ -33,7 +33,7 @@ class PatientRequirement extends React.Component {
                 <h5>Contact - {this.state.contact}</h5>
                 <h5>Patient ID - {this.state.patientid}</h5>
                 <h5>Email - {this.state.email}</h5> */}
-                <h3><strong>REQUIREMENT LOG:</strong></h3>
+                <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3>
                 <br></br>
                 <Table striped bordered hover>
                 <thead>
