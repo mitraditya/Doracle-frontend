@@ -36,7 +36,7 @@ class Requirements extends React.Component {
                 <h5>Patient ID - {this.state.patientid}</h5>
                 <h5>Email - {this.state.email}</h5>
                 <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3>
-                <Table striped bordered hover variant="dark">
+                <Table responsive="md" striped bordered hover variant="dark">
                 <thead>
                     <tr>
                     <th>Date</th>

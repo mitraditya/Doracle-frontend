@@ -49,7 +49,7 @@ class PatientDetails extends React.Component {
                  
                <br></br>
                
-                <Table striped bordered hover variant="dark">
+                <Table responsive="md" striped bordered hover variant="dark">
                 <thead>
                     <tr>
                     <th>Date</th>

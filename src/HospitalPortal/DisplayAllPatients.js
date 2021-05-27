@@ -26,7 +26,7 @@ class DisplayPatients extends React.Component {
         <Navbar></Navbar>
         <div style={{marginTop:'5em'}} className="container">
         <h1>LIST OF PATIENTS:</h1>
-        <Table striped bordered hover variant="dark">
+        <Table responsive="md" striped bordered hover variant="dark">
           <thead>
             <tr>
               <th>Patient ID</th>

@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './App.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";

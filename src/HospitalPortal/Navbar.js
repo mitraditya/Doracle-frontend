@@ -15,41 +15,29 @@ export class Navbar extends Component {
     render() {
         const { user } = this.props.auth;
         return (
-            <nav className="navbar navber-dark bg-dark navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
                 <Link to="/hospital" className="navbar-brand"  style={{color: "white"}}>Doracle</Link>
-                <div className="collapse navbar-collapse">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="navbar-item">
-                            <Link to="/hospital/displaypatients" className="nav-link" style={{color: "white"}}>All Data</Link>
-                        </li>
-                        <li className="navbar-item">
-                            <Link to="/hospital/addpatient" className="nav-link" style={{color: "white"}}>Create Patient</Link>
-                        </li>
-                        <li className="navbar-item">
-                            <Link to="/hospital/uploaddata" className="nav-link" style={{color: "white"}}>Upload Patient Database</Link>
-                        </li>
-                        <Link to="http://localhost:3000"><button
-                        onClick={this.onLogoutClick}
-                        className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                        style={{color: "white", justifyContent: "right"}}
-                        >
-                         Logout
-                     </button></Link>
-                        {/* <li className="navbar-item">
-                            <Link to="/" className="nav-link"  style={{color: "white"}}>Status</Link>
-                        </li>
-                        <li className="navbar-item">
-                            <Link to="/" className="nav-link" style={{color: "white"}}>Report</Link>
-                        </li>
-                        <li className="navbar-item">
-                            <Link to="/" className="nav-link" style={{color: "white"}}>Pharmacy</Link>
-                        </li> */}
-
-                       
-                    </ul>
-
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <Link to="/hospital/displaypatients" className="nav-link" style={{color: "white"}}>All Data</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link to="/hospital/addpatient" className="nav-link" style={{color: "white"}}>Create Patient</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link to="/hospital/uploaddata" className="nav-link" style={{color: "white"}}>Upload Patient Database</Link>
+                    </li>
+                    <li class="nav-item">
+                    <Link to="http://localhost:3000"><button onClick={this.onLogoutClick} className="btn btn-large waves-effect waves-light hoverable blue accent-3" style={{color: "white", justifyContent: "right"}}>Logout</button></Link>
+                    </li>
+                </ul>
                 </div>
-
+            </div>
             </nav>
         )
     }
