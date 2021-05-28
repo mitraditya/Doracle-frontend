@@ -1,6 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
+import classes from '../Login/Form.module.css';
 
 class ChooseForm extends React.Component {
     state = {
@@ -16,10 +17,10 @@ class ChooseForm extends React.Component {
             return <Redirect to="/hospitallogin" push />
         }
         return(
-            <div>
-                <h3 style={{marginTop:'10em'}}>Login for:</h3> <br/>
-                <Button onClick={() => this.setState({ navigatePatientForm: true })} variant="primary">Patient</Button> <br/> <br/>
-                <Button onClick={() => this.setState({ navigateHospitalForm: true })} variant="primary">Hospital</Button>
+            <div className={classes.formouter}>
+                <h1 className={classes.formh1}>LOGIN FOR:</h1>
+                <Button className={classes.formsubmit} onClick={() => this.setState({ navigatePatientForm: true })}>Patient</Button> <br/>
+                <Button className={classes.formsubmit} onClick={() => this.setState({ navigateHospitalForm: true })}>Hospital</Button>
             </div>
         )
     }
