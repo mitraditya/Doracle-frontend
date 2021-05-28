@@ -29,7 +29,7 @@ class ResetPassword extends React.Component {
                         console.log(json);
                         alert(json);
                     })
-                    window.location='/patient/'
+                    window.location='/hospital'
         }
     }
     handleChange = (event) => {

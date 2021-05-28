@@ -54,63 +54,50 @@ class HospitalLogin extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
-          <div className="col s8 offset-s2">
-           
-
-                <form style={{marginTop:'7em'}} onSubmit = {this.onSubmit} >
-              {/* <div className="input-field col s12"> */}
-                <label htmlFor="patientID" className={classes.formLabel}>Hospital ID</label><br></br>
+      <div className={classes.formouter}>
+        <div>
+          <h1 className={classes.formh1}>Hospital Login</h1>
+          <div>
+            <form onSubmit = {this.onSubmit} >
+                <label htmlFor="patientID" className={classes.formlabel}>
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.patientID}
+                    error={errors.patientID}
+                    id="patientID"
+                    type="text"
+                    placeholder="Hospital ID"
+                    className={classnames(classes.forminput, {
+                      invalid: errors.patientID || errors.patientnotfound
+                    })}
+                  />
+                  <span className={classes.formspan}>Hospital ID</span>
+                </label>
+              <label htmlFor="password" className={classes.formlabel}>
                 <input
-                  onChange={this.onChange}
-                  value={this.state.patientID}
-                  error={errors.patientID}
-                  id="patientID"
-                  type="text"
-                  className={classnames(classes.formInput, {
-                    invalid: errors.patientID || errors.patientnotfound
-                  })}
-                />
-                <br></br><br></br>
+                    onChange={this.onChange}
+                    value={this.state.password}
+                    error={errors.password}
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    className={classnames(classes.forminput, {
+                      invalid: errors.password || errors.passwordincorrect
+                    })}
+                  />
+                  <span className={classes.formspan}>Password</span>
+              </label>
                 <span className="red-text">
                   {errors.patientID}
                   {errors.patientnotfound}
                 </span>
-              {/* </div> */}
-              {/* <div className="input-field col s12"> */}
-              <label htmlFor="password" className={classes.formLabel}>Password</label>
-                <br></br>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames(classes.formInput, {
-                    invalid: errors.password || errors.passwordincorrect
-                  })}
-                />
-               <br></br><br></br>
                 <span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
                 </span>
-              {/* </div> */}
-              <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                  className="btn btn-warning"
-                >
-                  Login
-                </button>
-              </div>
+                <div>
+                  <button type="submit" className={classes.formsubmit}>Login</button>
+                </div>
             </form>
           </div>
         </div>
