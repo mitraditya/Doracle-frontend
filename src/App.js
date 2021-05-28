@@ -28,6 +28,7 @@ import PatientDetail from "./PatientPortal/PatientDetail";
 import PatientStatus from "./PatientPortal/PatientStatus";
 import PatientRequirement from "./PatientPortal/PatientRequirement";
 import ResetPassword from "./PatientPortal/ResetPassword";
+import HResetPassword from "./HospitalPortal/ResetPassword";
 import HospitalLogin from './components/auth/HospitalLogin';
 import UploadData from './HospitalPortal/UploadData';
 
@@ -76,7 +77,7 @@ class App extends React.Component {
               <PrivateRoute path="/hospital/:patientid" exact component={PatientDetails}/>
               <PrivateRoute path="/hospital/:patientid/addStatus"exact component={AddPatientStatus}/>
               <PrivateRoute path="/hospital/:patientid/requirements" exact component={Requirements}/>
-              <PrivateRoute path="/hospital/:patientid/reset-password" exact component={ResetPassword}/>
+              <PrivateRoute path="/hospital/:patientid/reset-password" exact component={HResetPassword}/>
            </Switch>
         </div>
       </Router>
