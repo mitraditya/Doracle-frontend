@@ -102,8 +102,10 @@ class Login extends Component {
                   {errors.patientID}
                   {errors.patientnotfound}
                 </span>
+                <br></br>
               {/* </div> */}
               {/* <div className="input-field col s12"> */}
+              <br></br>
               <label htmlFor="password" className={classes.formLabel}>Password</label>
                 <br></br>
                 <input
