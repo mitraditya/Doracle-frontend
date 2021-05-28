@@ -25,6 +25,8 @@ class AddPatient extends React.Component {
                     console.log(json);
                     alert(json);
                 })
+
+                // window.location='/hospital/displaypatients/'
     }
 
     handleChange = (event) => {

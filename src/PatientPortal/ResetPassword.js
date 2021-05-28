@@ -39,7 +39,7 @@ class ResetPassword extends React.Component {
         return(
             <div>
                 <Navbar></Navbar>
-                <h1 style={{marginTop: '2em'}}>UPDATE YOUR DETAILS:</h1>
+                <h1 style={{marginTop: '2em'}}>RESET YOUR PASSWORD :</h1>
                 <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
                   
                     <label className={classes.formLabel}>Password</label><br/>

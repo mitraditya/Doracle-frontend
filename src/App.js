@@ -76,6 +76,7 @@ class App extends React.Component {
               <PrivateRoute path="/hospital/:patientid" exact component={PatientDetails}/>
               <PrivateRoute path="/hospital/:patientid/addStatus"exact component={AddPatientStatus}/>
               <PrivateRoute path="/hospital/:patientid/requirements" exact component={Requirements}/>
+              <PrivateRoute path="/hospital/:patientid/reset-password" exact component={ResetPassword}/>
            </Switch>
         </div>
       </Router>

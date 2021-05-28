@@ -30,6 +30,9 @@ export class Navbar extends Component {
                     <NavLink to="/hospital/addpatient" exact activeStyle={{fontWeight: "bold",color: "red"}} className="nav-link" style={{color: "white"}}>Create Patient</NavLink>
                     </li>
                     <li class="nav-item">
+                    <NavLink to={"/hospital/"+user.patientID+"/reset-password"} exact activeStyle={{fontWeight: "bold",color: "red"}} className="nav-link" style={{color: "white"}}>Reset Password</NavLink>
+                    </li>
+                    <li class="nav-item">
                     <NavLink to="/hospital/uploaddata" exact activeStyle={{fontWeight: "bold",color: "red"}} className="nav-link" style={{color: "white"}}>Upload Patient Database</NavLink>
                     </li>
                     <li class="nav-item">
