@@ -1,27 +1,69 @@
-.formLabel {
-    font-size: 20px;
+.formouter {
+    background-image: linear-gradient(to right,#35dc9b, #f4e2d8);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.formh1 {
+    margin: 0 auto 40px;
+    color: rgb(0, 0, 0);
+    font: 20px Helvetica;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     font-weight: 500;
 }
-
-.formInput {
-    width: 80%;
-    padding: 5px 22px;
-    margin: 10px 0px;
-    box-sizing: border-box;  
-    border: 2px solid #58B19F;
-
+.formlabel {
+    position: relative;
+    display: block;
 }
-
-.formSubmit {
-    background-color: #8842d5;
+.forminput {
+    font: 18px Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    display: block;
     border: none;
-    color: white;
-    padding: 8px 36px;
-    text-decoration: none;
-    border: 2px solid #ccc;
-    margin: 5px 4px;
-    cursor: pointer;
-    font-size: 20px; 
-    font-weight: 500;
-    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+.forminput::placeholder {
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    font: 18px Helvetica, Arial, sans-serif;
+}
+.forminput:focus, .forminput.populated {
+    padding-top: 28px;
+    padding-bottom: 12px;
+}
+.forminput:focus::placeholder, .forminput.populated::placeholder {
+    color: transparent;
+}
+.forminput:focus + span, .forminput.populated + span {
+    opacity: 1;
+    top: 10px;
+}
+.formspan {
+    color: #35dc9b;
+    font: 13px Helvetica, Arial, sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.formsubmit {
+    transition: all 0.2s ease-in-out;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: #1aaf75;
+    color: #fff;
+    padding: 16px 40px;
+}
+.formsubmit:hover {
+    background: #109f67;
 }
