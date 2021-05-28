@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PatientDetailsTableRow from '../Portal/PatientDetailsTableRow';
 import Navbar from "./Navbar";
+import classes from '../Login/Form.module.css';
 
 class PatientStatus extends React.Component {
     constructor(props){
@@ -28,42 +29,21 @@ class PatientStatus extends React.Component {
         return (
             
             <div>
-                <Navbar/>
-                <div className="container">
-                {/* <h5>Name - {this.state.name}</h5>
-                <h5>Contact - {this.state.contact}</h5>
-                <h5>Patient ID - {this.state.patientid}</h5>
-                <h5>Email - {this.state.email}</h5> */}
-                {/* <div>
-                <Link to={"/hospital/"+this.state.patientid+"/profile"} className="btn btn-warning">Update Profile</Link>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to={"/hospital/"+this.state.patientid+"/requirements"} className="btn btn-danger">Add Requirement</Link>
-                &nbsp;&nbsp;&nbsp;&nbsp;        
-                <Link to="#" className="btn btn-info">Reports</Link>
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to="#" className="btn btn-success">Previous Records</Link>
-
-
-                </div> */}
-                
-                <h3 style={{marginTop: '2em'}}><strong>PATIENT LOG:</strong></h3>
-                 
-               <br></br>
-               
-                <Table responsive="md" striped bordered hover>
-                <thead>
-                    <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Condition</th>
-                    <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>{display}</tbody>
-                </Table> <br/>
-                {/* <AddPatientStatus id={this.state.id} /> */}
-                
-            </div>
+                <Navbar/><br/>
+                <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
+                    <h1>PATIENT LOG:</h1>
+                    <Table responsive="md" striped bordered hover>
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Condition</th>
+                        <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>{display}</tbody>
+                    </Table>
+                </div>
             </div>
         )
     }

@@ -3,6 +3,8 @@ import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ViewRequirementsTableRow from '../Portal/ViewRequirementTableRow';
 import Navbar from "./Navbar";
+import classes from '../Login/Form.module.css';
+
 class PatientRequirement extends React.Component {
     constructor(props){
         super(props);
@@ -27,26 +29,20 @@ class PatientRequirement extends React.Component {
         return (
 
             <div>
-                <Navbar></Navbar>
-                <div className="container">
-                {/* <h5>Name - {this.state.name}</h5>
-                <h5>Contact - {this.state.contact}</h5>
-                <h5>Patient ID - {this.state.patientid}</h5>
-                <h5>Email - {this.state.email}</h5> */}
-                <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3>
-                <br></br>
-                <Table responsive="md" striped bordered hover>
-                <thead>
-                    <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Requirement</th>
-                    <th>Info</th>
-                    </tr>
-                </thead>
-                <tbody>{display}</tbody>
-                </Table> <br/>
-                {/* <AddRequirements id={this.state.id} /> */}
+                <Navbar/><br/>
+                <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
+                    <h1>REQUIREMENT LOG:</h1>
+                    <Table responsive="md" striped bordered hover>
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Requirement</th>
+                        <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>{display}</tbody>
+                    </Table>
                 </div>
             </div>
         )
