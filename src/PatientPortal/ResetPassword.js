@@ -38,20 +38,26 @@ class ResetPassword extends React.Component {
     render(){
         return(
             <div>
-                <Navbar></Navbar>
-                <h1 style={{marginTop: '2em'}}>RESET YOUR PASSWORD :</h1>
-                <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
-                  
-                    <label className={classes.formLabel}>Password</label><br/>
-                    <input className={classes.formInput} type="password" name="password" value= {this.state.password} 
-                    onChange={this.handleChange} /> <br/><br/>
+                <Navbar/>
+                <div className={classes.formouter}>
+                    <h1 className={classes.formh1}>RESET YOUR PASSWORD:</h1>
+                    <form onSubmit = {this.handleSubmit} >
+                    
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="password" name="password" placeholder="New Password" value= {this.state.password} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>New Password</span>
+                        </label>
 
-                    <label className={classes.formLabel}>Confirm Password</label><br/>
-                    <input className={classes.formInput} type="password" name="confirmpassword" value= {this.state.confirmpassword} 
-                    onChange={this.handleChange} /> <br/><br/>
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="password" name="confirmpassword" placeholder="Confirm Password" value= {this.state.confirmpassword} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Confirm Password</span>
+                        </label>
 
-                    <input className={classes.formSubmit} type="submit" value="Confirm" />
-                </form>
+                        <input className={classes.formsubmit} type="submit" value="Confirm" />
+                    </form>
+                </div>
             </div>
         )
     }

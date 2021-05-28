@@ -1,7 +1,7 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Navbar";
-
+import classes from '../Login/Form.module.css';
 
 class PatientDetail extends React.Component {
     constructor(props){
@@ -18,38 +18,14 @@ class PatientDetail extends React.Component {
         });
     }
     render(){
-        //console.log(this.state);
-        // const display = this.state.status.map((item,pos) => {
-        //     return (
-        //         <PatientDetailsTableRow key={pos} eachstatus={item} id={this.state.id} />
-        //     )
-        // })
         return (
-            
             <div>
-                <Navbar></Navbar>
-                <div style={{marginTop: '2em'}} className="container">
-                <h5>Name - {this.state.name}</h5>
-                <h5>Contact - {this.state.contact}</h5>
-                <h5>Patient ID - {this.state.patientid}</h5>
-                <h5>Email - {this.state.email}</h5>
-                
-                {/* <h3>PATIENT LOG:</h3>
-                 
-               <br></br>
-               
-                <Table striped bordered hover variant="dark">
-                <thead>
-                    <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Condition</th>
-                    <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>{display}</tbody>
-                </Table> <br/>
-                <AddPatientStatus id={this.state.id} /> */}
+                <Navbar/>
+                <div className={classes.formouter} >
+                    <h5>Name - {this.state.name}</h5>
+                    <h5>Contact - {this.state.contact}</h5>
+                    <h5>Patient ID - {this.state.patientid}</h5>
+                    <h5>Email - {this.state.email}</h5>
                 </div>
             </div>
         )

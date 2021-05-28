@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
 import Navbar from "./Navbar";
+
 class UpdateProfile extends React.Component {
     constructor(props){
         super(props);
@@ -35,27 +36,37 @@ class UpdateProfile extends React.Component {
     render(){
         return(
             <div>
-                <Navbar></Navbar>
-                <h1 style={{marginTop: '2em'}}>UPDATE YOUR DETAILS:</h1>
-                <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
-                    <label className={classes.formLabel}>First Name</label><br/>
-                    <input className={classes.formInput} type="text" name="firstname"  value={this.state.firstname}  
-                    onChange={this.handleChange} /> <br/><br/>
+                <Navbar/>
+                <div className={classes.formouter}>
+                    <h1 className={classes.formh1}>UPDATE YOUR DETAILS:</h1>
+                    <form onSubmit = {this.handleSubmit} >
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="firstname" placeholder="First Name" value={this.state.firstname}  
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>First Name</span>
+                        </label>
+                        
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="lastname" placeholder="Last Name" value={this.state.lastname} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Last Name</span>
+                        </label>
+                        
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="contact" placeholder="Contact Number" value={this.state.contact} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Contact Number</span>
+                        </label>
+                        
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="email" placeholder="Email" value={this.state.email} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Email</span>
+                        </label>
 
-                    <label className={classes.formLabel}>Last Name</label><br/>
-                    <input className={classes.formInput} type="text" name="lastname" value= {this.state.lastname} 
-                    onChange={this.handleChange} /> <br/><br/>
-
-                    <label className={classes.formLabel}>Contact Number</label><br/>
-                    <input className={classes.formInput} type="text" name="contact" value= {this.state.contact} 
-                    onChange={this.handleChange} /> <br/><br/>
-
-                    <label className={classes.formLabel}>Email</label><br/>
-                    <input className={classes.formInput} type="text" name="email" value= {this.state.email} 
-                    onChange={this.handleChange} /> <br/><br/>
-
-                    <input className={classes.formSubmit} type="submit" value="Submit" />
-                </form>
+                        <input className={classes.formsubmit} type="submit" value="Submit" />
+                    </form>
+                </div>
             </div>
         )
     }
