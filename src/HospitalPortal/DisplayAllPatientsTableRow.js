@@ -19,7 +19,7 @@ class DisplayPatientsTableRow extends React.Component {
           }
           else {
             fetch(
-              `http://localhost:4000/hospital/${this.props.itemid}/status/${
+              `https://doracle-backend.herokuapp.com/hospital/${this.props.itemid}/status/${
                 this.props.healthstatus[this.props.healthstatus.length - 1]
               }`
             )

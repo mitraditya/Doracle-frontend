@@ -9,7 +9,7 @@ class UpdateProfile extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data2) => {
             console.log(data2);
@@ -18,7 +18,7 @@ class UpdateProfile extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:4000/hospital/update/${this.state.id}`, {
+        fetch(`https://doracle-backend.herokuapp.com/hospital/update/${this.state.id}`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({firstname: this.state.firstname, lastname: this.state.lastname, email: this.state.email, contact: this.state.contact})

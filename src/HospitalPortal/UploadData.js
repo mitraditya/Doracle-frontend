@@ -15,7 +15,7 @@ class UploadData extends React.Component {
         formData.append('myFile',  this.state.selectedFile)
         console.log(formData)
 
-        fetch('http://localhost:4000/hospital/upload', {
+        fetch('https://doracle-backend.herokuapp.com/hospital/upload', {
             method: 'POST',
             body: formData
         })
@@ -36,14 +36,16 @@ class UploadData extends React.Component {
         return(
             <div>
                 <Navbar/>
-                <h1 style={{marginTop: '2em'}}>UPLOAD PATIENT DATABASE:</h1> <br/>
-                <form onSubmit = {this.handleSubmit} >
-                    <label className={classes.formLabel}>Select a csv file:</label><br/>
-                    <input className={classes.formInput} name="csvfile" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                    onChange={this.handleChange} /> <br/><br/>
-
-                    <input className={classes.formSubmit} type="submit" value="Submit" />
-                </form>
+                <div className={classes.formouter}>
+                    <h1 className={classes.formh1}>UPLOAD PATIENT DATABASE:</h1>
+                    <form onSubmit = {this.handleSubmit} >
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} name="csvfile" type="file" placeholder="Select a csv file:" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                        onChange={this.handleChange} />
+                        </label>
+                        <input className={classes.formsubmit} type="submit" value="Submit" />
+                    </form>
+                </div>
             </div>
         )
     }

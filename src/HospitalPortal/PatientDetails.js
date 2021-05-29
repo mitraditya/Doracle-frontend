@@ -5,6 +5,7 @@ import PatientDetailsTableRow from '../Portal/PatientDetailsTableRow';
 import AddPatientStatus from './AddStatus';
 import {Link} from 'react-router-dom';
 import Navbar from "./Navbar";
+import classes from '../Login/Form.module.css';
 
 class PatientDetails extends React.Component {
     constructor(props){
@@ -13,7 +14,7 @@ class PatientDetails extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data2) => { 
             const pname = data2.firstname + ' ' + data2.lastname;
@@ -28,41 +29,37 @@ class PatientDetails extends React.Component {
             )
         })
         return (
-            
             <div>
-                <Navbar></Navbar>
-                <div style={{marginTop: '2em'}} className="container">
-                <h5>Name - {this.state.name}</h5>
-                <h5>Contact - {this.state.contact}</h5>
-                <h5>Patient ID - {this.state.patientid}</h5>
-                <h5>Email - {this.state.email}</h5>
+                <Navbar/>
+                <div className={classes.formouter}>
+                    <h5>Name - {this.state.name}</h5>
+                    <h5>Contact - {this.state.contact}</h5>
+                    <h5>Patient ID - {this.state.patientid}</h5>
+                    <h5>Email - {this.state.email}</h5>
 
-                <div style={{marginTop: '2em'}}>
-                    <Link to={"/hospital/"+this.state.patientid+"/requirements"} className="btn btn-danger">Add Requirement</Link>
-                    &nbsp;&nbsp;&nbsp;&nbsp;        
-                    <Link to="#" className="btn btn-info">Reports</Link>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <Link to="#" className="btn btn-success">Previous Records</Link>
+                    <div style={{marginTop: '2em'}}>
+                        <Link to={"/hospital/"+this.state.patientid+"/requirements"}  className={[classes.formsubmit, "btn btn-danger"].join(' ')} style={{backgroundColor: 'red'}}>Add Requirement</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;        
+                        <Link to="#" className={[classes.formsubmit, "btn btn-info"].join(' ')} style={{backgroundColor: 'blue'}}>Reports</Link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <Link to="#" className={[classes.formsubmit, "btn btn-success"].join(' ')} style={{backgroundColor: 'green'}}>Previous Records</Link>
+                    </div>
+                    
+                    <h3 style={{marginTop: '2em'}}>PATIENT LOG:</h3><br/>
+                
+                    <Table responsive="md" striped bordered hover variant="dark">
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Condition</th>
+                        <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>{display}</tbody>
+                    </Table> <br/>
+                    <AddPatientStatus id={this.state.id} />
                 </div>
-                
-                <h3 style={{marginTop: '2em'}}>PATIENT LOG:</h3>
-                 
-               <br></br>
-               
-                <Table responsive="md" striped bordered hover variant="dark">
-                <thead>
-                    <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Condition</th>
-                    <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>{display}</tbody>
-                </Table> <br/>
-                <AddPatientStatus id={this.state.id} />
-                
-            </div>
             </div>
         )
     }

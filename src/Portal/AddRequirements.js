@@ -13,7 +13,7 @@ class AddRequirements extends React.Component {
         let time = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+(current.getDate()) +"-"+ current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
         
         
-        fetch(`http://localhost:4000/hospital/${this.props.id}/pharmacy`, {
+        fetch(`https://doracle-backend.herokuapp.com/hospital/${this.props.id}/pharmacy`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({date: time, required_pharmacy: this.state.requirements, info: this.state.info})
@@ -31,18 +31,22 @@ class AddRequirements extends React.Component {
     render(){
         console.log("Render called");
         return(
-            <div>
+            <div style={{marginTop: '2vh'}}>
                 <h1>ADD PATIENT REQUIREMENTS:</h1> <br/>
                 <form onSubmit = {this.handleSubmit} >
-                    <label className={classes.formLabel}>Requirements</label><br/>
-                    <input className={classes.formInput} type="text" name="requirements"  value={this.state.requirements}  
-                    onChange={this.handleChange} /> <br/><br/>
+                    <label className={classes.formlabel}>
+                        <input className={classes.forminput} type="text" name="requirements" placeholder="Requirements" value={this.state.requirements}  
+                        onChange={this.handleChange} />
+                        <span className={classes.formspan}>Requirements</span>
+                    </label>
 
-                    <label className={classes.formLabel}>Info</label><br/>
-                    <input className={classes.formInput} type="text" name="info"  value={this.state.info}  
-                    onChange={this.handleChange} /> <br/><br/>
+                    <label className={classes.formlabel}>
+                        <input className={classes.forminput} type="text" name="info" placeholder="Info" value={this.state.info}  
+                        onChange={this.handleChange} />
+                        <span className={classes.formspan}>Info</span>
+                    </label>
 
-                    <input className={classes.formSubmit} type="submit" value="Submit" />
+                    <input className={classes.formsubmit} type="submit" value="Submit" />
                 </form>
             </div>
         )

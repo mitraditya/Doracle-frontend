@@ -8,7 +8,7 @@ class ResetPassword extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data2) => {
             console.log(data2);
@@ -20,7 +20,7 @@ class ResetPassword extends React.Component {
         if(this.state.password!=this.state.confirmpassword)
             alert("Password must be same as confirm password");
         else{
-            fetch(`http://localhost:4000/hospital/updatePassword/${this.state.id}`, {
+            fetch(`https://doracle-backend.herokuapp.com/hospital/updatePassword/${this.state.id}`, {
                 method: "POST",
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({password: this.state.password})

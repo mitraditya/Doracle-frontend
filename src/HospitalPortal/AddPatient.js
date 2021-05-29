@@ -16,7 +16,7 @@ class AddPatient extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault();
         console.log(JSON.stringify(this.state));
-        fetch(`http://localhost:4000/hospital/add`, {
+        fetch(`https://doracle-backend.herokuapp.com/hospital/add`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(this.state)
@@ -25,8 +25,6 @@ class AddPatient extends React.Component {
                     console.log(json);
                     alert(json);
                 })
-
-                // window.location='/hospital/displaypatients/'
     }
 
     handleChange = (event) => {
@@ -36,26 +34,37 @@ class AddPatient extends React.Component {
         return(
             <div>
                 <Navbar/>
-                <h1 style={{marginTop:'2em'}}>ADD A NEW PATIENT:</h1>
-                <form style={{marginTop:'2em'}} onSubmit = {this.handleSubmit} >
-                    <label className={classes.formLabel}>First Name</label><br/>
-                    <input className={classes.formInput} type="text" name="firstname"  value={this.state.firstname}  
-                    onChange={this.handleChange} /> <br/><br/>
+                <div className={classes.formouter}>
+                    <h1 className={classes.formh1}>ADD A NEW PATIENT:</h1>
+                    <form onSubmit = {this.handleSubmit} >
 
-                    <label className={classes.formLabel}>Last Name</label><br/>
-                    <input className={classes.formInput} type="text" name="lastname" value= {this.state.lastname} 
-                    onChange={this.handleChange} /> <br/><br/>
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="firstname" placeholder="First Name" value={this.state.firstname}  
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>First Name</span>
+                        </label>
 
-                    <label className={classes.formLabel}>Contact Number</label><br/>
-                    <input className={classes.formInput} type="text" name="contact" value= {this.state.contact} 
-                    onChange={this.handleChange} /> <br/><br/>
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="lastname" placeholder="Last Name" value={this.state.lastname} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Last Name</span>
+                        </label>
 
-                    <label className={classes.formLabel}>Email</label><br/>
-                    <input className={classes.formInput} type="text" name="email" value= {this.state.email} 
-                    onChange={this.handleChange} /> <br/><br/>
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="contact" placeholder="Contact Number" value={this.state.contact} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Contact Number</span>
+                        </label>
 
-                    <input className={classes.formSubmit} type="submit" value="Submit" />
-                </form>
+                        <label className={classes.formlabel}>
+                            <input className={classes.forminput} type="text" name="email" placeholder="Email" value={this.state.email} 
+                            onChange={this.handleChange} />
+                            <span className={classes.formspan}>Email</span>
+                        </label>
+
+                        <input className={classes.formsubmit} type="submit" value="Submit" />
+                    </form>
+                </div>
             </div>
         )
     }

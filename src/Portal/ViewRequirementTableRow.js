@@ -8,7 +8,7 @@ class RequirementsTableRow extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/${this.props.id}/pharmacy/${this.props.eachreq}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/${this.props.id}/pharmacy/${this.props.eachreq}`)
             .then((response) => response.json())
             .then((data1) => {
               const x=data1.date;

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ViewRequirementsTableRow from '../Portal/ViewRequirementTableRow';
 import AddRequirements from '../Portal/AddRequirements';
 import Navbar from "./Navbar";
+import classes from '../Login/Form.module.css';
 
 class Requirements extends React.Component {
     constructor(props){
@@ -12,7 +13,7 @@ class Requirements extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data3) => {
             const pname = data3.firstname + ' ' + data3.lastname;
@@ -27,27 +28,27 @@ class Requirements extends React.Component {
             )
         })
         return (
-
             <div>
                 <Navbar/>
-                <div style={{marginTop: '2em'}} className="container">
-                <h5>Name - {this.state.name}</h5>
-                <h5>Contact - {this.state.contact}</h5>
-                <h5>Patient ID - {this.state.patientid}</h5>
-                <h5>Email - {this.state.email}</h5>
-                <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3>
-                <Table responsive="md" striped bordered hover variant="dark">
-                <thead>
-                    <tr>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Requirement</th>
-                    <th>Info</th>
-                    </tr>
-                </thead>
-                <tbody>{display}</tbody>
-                </Table> <br/>
-                <AddRequirements id={this.state.id} />
+                <div className={classes.formouter}> <br/>
+                    <h5>Name - {this.state.name}</h5>
+                    <h5>Contact - {this.state.contact}</h5>
+                    <h5>Patient ID - {this.state.patientid}</h5>
+                    <h5>Email - {this.state.email}</h5>
+
+                    <h3 style={{marginTop: '2em'}}><strong>REQUIREMENT LOG:</strong></h3> <br/>
+                    <Table responsive="md" striped bordered hover variant="dark">
+                    <thead>
+                        <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Requirement</th>
+                        <th>Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>{display}</tbody>
+                    </Table> <br/>
+                    <AddRequirements id={this.state.id} />
                 </div>
             </div>
         )

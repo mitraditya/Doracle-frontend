@@ -3,10 +3,12 @@ import Table from "react-bootstrap/Table";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DisplayPatientsTableRow from './DisplayAllPatientsTableRow'
 import Navbar from './Navbar'
+import classes from '../Login/Form.module.css';
+
 class DisplayPatients extends React.Component {
   state = { AllPatients: [] };
   componentDidMount() {
-    fetch("http://localhost:4000/hospital/")
+    fetch("https://doracle-backend.herokuapp.com/hospital/")
       .then((response) => response.json())
       .then((data) => {
         this.setState({ AllPatients: data });
@@ -23,8 +25,8 @@ class DisplayPatients extends React.Component {
     });
     return (
       <div>
-        <Navbar></Navbar>
-        <div style={{marginTop:'5em'}} className="container">
+        <Navbar/>
+        <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
         <h1>LIST OF PATIENTS:</h1>
         <Table responsive="md" striped bordered hover variant="dark">
           <thead>

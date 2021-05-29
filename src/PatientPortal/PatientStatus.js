@@ -12,7 +12,7 @@ class PatientStatus extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data2) => { 
             const pname = data2.firstname + ' ' + data2.lastname;

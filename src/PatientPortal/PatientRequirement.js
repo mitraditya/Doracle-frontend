@@ -12,7 +12,7 @@ class PatientRequirement extends React.Component {
     }
 
     componentDidMount(){
-        fetch(`http://localhost:4000/hospital/show/${this.props.match.params.patientid}`)
+        fetch(`https://doracle-backend.herokuapp.com/hospital/show/${this.props.match.params.patientid}`)
         .then((response) => response.json())
         .then((data3) => {
             const pname = data3.firstname + ' ' + data3.lastname;
