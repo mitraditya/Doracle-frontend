@@ -17,7 +17,7 @@ class ResetPassword extends React.Component {
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        if(this.state.password!=this.state.confirmpassword)
+        if(this.state.password!==this.state.confirmpassword)
             alert("Password must be same as confirm password");
         else{
             fetch(`https://doracle-backend.herokuapp.com/hospital/updatePassword/${this.state.id}`, {
