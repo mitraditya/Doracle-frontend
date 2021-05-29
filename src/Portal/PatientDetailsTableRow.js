@@ -13,7 +13,7 @@ class PatientDetailsTableRow extends React.Component {
             .then((data1) => {
               const x=data1.date;
               const mod_date=x.substring(0,10);
-              const mod_time=x.substring(12,19);
+              const mod_time=x.substring(11);
               this.setState({date: mod_date, note: data1.note, time: mod_time})
             });
     }

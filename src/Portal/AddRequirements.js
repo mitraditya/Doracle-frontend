@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
+import moment from 'moment';
 
 class AddRequirements extends React.Component {
     constructor(props){
@@ -9,14 +10,12 @@ class AddRequirements extends React.Component {
     
     handleSubmit = (event) => {
         event.preventDefault();
-        let current = new Date();
-        let time = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+(current.getDate()) +"-"+ current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
-        
-        
+        let cdate = moment().format('DD/MM/YYYYTh:mm:ss a');
+        console.log(cdate);
         fetch(`https://doracle-backend.herokuapp.com/hospital/${this.props.id}/pharmacy`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({date: time, required_pharmacy: this.state.requirements, info: this.state.info})
+            body: JSON.stringify({date: cdate, required_pharmacy: this.state.requirements, info: this.state.info})
             }).then((response) => response.json())
                 .then((json) => {
                     window.location.reload();

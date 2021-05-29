@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
+import moment from 'moment';
 
 class AddPatientStatus extends React.Component {
     constructor(props){
@@ -9,13 +10,13 @@ class AddPatientStatus extends React.Component {
     
     handleSubmit = (event) => {
         event.preventDefault();
-        let current = new Date();
-        let time = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+(current.getDate()) +"-"+ current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
         console.log(this.props.id);
+        let cdate = moment().format('DD/MM/YYYYTh:mm:ss a');
+        console.log(cdate);
         fetch(`https://doracle-backend.herokuapp.com/hospital/${this.props.id}/status`, {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({date: time, note: this.state.note})
+            body: JSON.stringify({date: cdate, note: this.state.note})
             }).then((response) => response.json())
                 .then((json) => {
                     window.location.reload();
