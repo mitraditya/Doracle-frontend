@@ -60,10 +60,11 @@
     transition: all 0.2s ease-in-out;
     font: 18px Helvetica, Arial, sans-serif;
     border: none;
-    background: #1aaf75;
-    color: #fff;
+    background: #fff;
+    color: #1aaf75;
     padding: 16px 40px;
 }
 .formsubmit:hover {
     background: #109f67;
+    box-shadow: 0 0 8px rgb(69, 92, 219);
 }

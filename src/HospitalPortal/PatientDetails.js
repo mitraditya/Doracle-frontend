@@ -46,7 +46,7 @@ class PatientDetails extends React.Component {
                     </div>
                     
                     <h3 style={{marginTop: '2em'}}>PATIENT LOG:</h3><br/>
-                
+                    
                     <Table responsive="md" striped bordered hover variant="dark">
                     <thead>
                         <tr>

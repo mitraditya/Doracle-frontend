@@ -28,17 +28,19 @@ class DisplayPatients extends React.Component {
         <Navbar/>
         <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
         <h1>LIST OF PATIENTS:</h1>
-        <Table responsive="md" striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>Patient ID</th>
-              <th>Name</th>
-              <th>Health Status</th>
-              <th>Phone</th>
-            </tr>
-          </thead>
-          <tbody>{display}</tbody>
-        </Table>
+        <div style={{paddingLeft: '10%', paddingRight: '10%'}}>
+          <Table responsive="md" striped bordered hover variant="dark">
+            <thead>
+              <tr>
+                <th>Patient ID</th>
+                <th>Name</th>
+                <th>Health Status</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>{display}</tbody>
+          </Table>
+        </div>
         </div>
       </div>
     );
