@@ -32,7 +32,7 @@ class AddPatientStatus extends React.Component {
     render(){
         return(
             <div>
-                <h1>ADD PATIENT STATUS:</h1> <br/>
+                <h3>ADD PATIENT STATUS:</h3> <br/>
                 {this.state.alert ? <Alerting text={this.state.alert} />: null}
                 <form onSubmit = {this.handleSubmit} >
                     <label className={classes.formlabel} style={{display: 'inline-block'}}>

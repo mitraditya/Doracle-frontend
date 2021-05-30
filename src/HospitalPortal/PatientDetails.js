@@ -31,27 +31,51 @@ class PatientDetails extends React.Component {
         return (
             <div>
                 <Navbar/>
-            <div className="card" style={{width: 22 , margin :0 }}>
+            <div className="card" style={{width: 300, height: 570,margin :"0px auto", float:"right"}}>
             <img class="card-img-top"
             src="https://media.geeksforgeeks.org/wp-content/uploads/20190506125816/avt.png"
-                    alt="Card image cap"/>
+                    style={{width: 200, height: 170, marginLeft: "20%"}} alt="Card image cap"/>
+        <div className="card-body">
+			<h5 className="card-title" style={{color:"green"}}>
+				PROFILE
+			</h5>
+			
+			<p className="card-text" style={{color:"green"}}>
+            Name - {this.state.name}
+			</p>
+			
+			<p className="card-text" style={{color:"green"}}>
+            Contact - {this.state.contact}
+			</p>
+            <p className="card-text" style={{color:"green"}}>
+            Patient ID - {this.state.patientid}
+			</p>
+            <p className="card-text" style={{color:"green"}}>
+            Email - {this.state.email}
+			</p>
+		</div>
+        <div className="card-footer text-center">
+						
+			<button className="btn btn-primary btn-sm"
+						id="left" style={{color:"white"}}>
+ <Link to={"/hospital/"+this.state.patientid+"/requirements"} style={{backgroundColor: 'white', fontSize: "25px", padding: "5px"}}>+ Pharmacy</Link>
+
+			</button>
+			
+		
+		</div>
             </div>
 			
                 <div className={classes.formouter}> <br/>
-                    <h5>Name - {this.state.name}</h5>
-                    <h5>Contact - {this.state.contact}</h5>
-                    <h5>Patient ID - {this.state.patientid}</h5>
-                    <h5>Email - {this.state.email}</h5>
-
-                    <div style={{marginTop: 2}}>
+                   
+                    {/* <div style={{marginTop: 2}}>
                         <Link to={"/hospital/"+this.state.patientid+"/requirements"}  className={[classes.formsubmits, "btn btn-danger"].join(' ')} style={{backgroundColor: 'red'}}>Add Requirement</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;        
-                        <Link to="#" className={[classes.formsubmits, "btn btn-info"].join(' ')} style={{backgroundColor: 'blue', textAlign: 'center'}}>Reports</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
                         <Link to="#" className={[classes.formsubmits, "btn btn-success"].join(' ')} style={{backgroundColor: 'green'}}>Previous Records</Link>
-                    </div>
+                    </div> */}
                     
-                    <h3 style={{marginTop: 2}}>PATIENT LOG:</h3><br/>
+                    <h3>PATIENT LOG:</h3><br/>
                     
                     <Table responsive="md" striped bordered hover variant="dark">
                     <thead>
