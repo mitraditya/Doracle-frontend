@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+<p><h1 align="center">Doracle Website</h1>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+  <a href="https://www.mongodb.com/">
+    MongoDB
+  </a>
+  ,
+  <a href ="https://expressjs.com/">
+     Express JS
+  </a>
+,
+  <a href="https://reactjs.org/">
+    React JS
+  </a>
+,
+  <a href="https://nodejs.org/en/">
+    NodeJS
+  </a>
+(MERN STACK)
+</h1>
 
-## Available Scripts
+<p align="center">
+  <strong>A one-stop solution to monitor your patient - for the families as well as
+hospitals.</strong><br>
+</p>
+
+<p>
+  Doracle is a patient management system useful for hospitals as well as patients. We intend to develop a secure, scalable application that adopts a set of revolutionizing steps that will pave the way to a better-managed hospital that will be able to provide superior healthcare advantages to its patients. Families no longer have to wait in long queues in dire situations waiting to know how their patient is. They will be provided a unique login credential for their patient with which, they will be able to login into the application and access real-time updates on the treatment status of their patients.
+</p>
+
+<strong>Doracle is made with the MERN Stack, however this is just the Frontend part of our code, and is made using React JS.</strong>
+
+React is a JavaScript library for building user interfaces.
+* *Declarative:* React makes it painless to create interactive UIs.
+* *Component-Based:*
+* *Learn Once, Write Anywhere:*
+
+## Installation
+
+Clone the project:
+
+bash
+git clone https://github.com/mitraditya/Doracle-frontend.git
+
+
+Run the following command:
+
+bash
+cd Doracle-frontend/
+
+
+Then, run the following command:
+
+bash
+npm i
+
+This will install all the required dependencies to run the project.
 
 In the project directory, you can run:
-
-### `npm start`
+bash
+npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Note
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This webapp is deployed on vercel, and can be found at: [https://doracle-webapp.vercel.app/](https://doracle-webapp.vercel.app/)
 
-### `npm run build`
+The backend of this webapp is hosted at: [https://github.com/isha27255/Doracle](https://github.com/isha27255/Doracle) and it is deployed on Heroku at: [https://doracle-backend.herokuapp.com/](https://doracle-backend.herokuapp.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We have also made a Mobile application for Doracle, on React Native. The same can be found at: [https://github.com/tanu272/Doracle-App](https://github.com/tanu272/Doracle-App)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Video Link 
+https://drive.google.com/file/d/1KAmBblyKPKF9ZCDc5mUkqfSS-0K9LkdD/view?usp=sharing
