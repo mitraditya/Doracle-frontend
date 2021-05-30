@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
 import moment from 'moment';
+import Alerting from '../Alerting';
 
 class AddPatientStatus extends React.Component {
     constructor(props){
         super(props);
-        this.state = {note: ""}
+        this.state = {note: "", alert: ""}
     }
     
     handleSubmit = (event) => {
@@ -19,9 +20,9 @@ class AddPatientStatus extends React.Component {
             body: JSON.stringify({date: cdate, note: this.state.note})
             }).then((response) => response.json())
                 .then((json) => {
-                    window.location.reload();
+                    //window.location.reload();
                     console.log(json);
-                    alert(json);
+                    this.setState({alert: json})
                 })
     }
     handleChange = (event) => {
@@ -32,6 +33,7 @@ class AddPatientStatus extends React.Component {
         return(
             <div>
                 <h1>ADD PATIENT STATUS:</h1> <br/>
+                {this.state.alert ? <Alerting text={this.state.alert} />: null}
                 <form onSubmit = {this.handleSubmit} >
                     <label className={classes.formlabel} style={{display: 'inline-block'}}>
                         <input className={classes.forminput} style={{justifyContent: 'center'}} type="text" name="note" placeholder="Condition" value={this.state.note}  

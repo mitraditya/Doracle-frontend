@@ -31,7 +31,7 @@ class PatientDetails extends React.Component {
         return (
             <div>
                 <Navbar/>
-                <div className={classes.formouter}>
+                <div className={classes.formouter}> <br/>
                     <h5>Name - {this.state.name}</h5>
                     <h5>Contact - {this.state.contact}</h5>
                     <h5>Patient ID - {this.state.patientid}</h5>
