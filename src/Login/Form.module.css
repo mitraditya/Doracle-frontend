@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin-top: 0px !important;
 }
 .formh1 {
     margin: 0 auto 40px;
@@ -30,6 +31,7 @@
     font-size: 18px;
     outline: none;
     transition: all 0.2s ease-in-out;
+    border-radius: 10px;
 }
 .forminput::placeholder {
     transition: all 0.2s ease-in-out;
@@ -63,8 +65,24 @@
     background: #fff;
     color: #1aaf75;
     padding: 16px 40px;
+    width: 140px;
+    border-radius: 5px;
 }
 .formsubmit:hover {
-    background: #109f67;
+    /* background: #109f67; */
     box-shadow: 0 0 8px rgb(69, 92, 219);
+}
+
+.formsubmits{
+    transition: all 0.2s ease-in-out;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: #fff;
+    color: white;
+    font-weight: bold;
+    padding: 8px 8px;
+    width: 160px;
+    height: 60px;
+    justify-content: center;
+    border-radius: 5px;
 }

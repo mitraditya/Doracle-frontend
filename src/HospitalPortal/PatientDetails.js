@@ -31,21 +31,27 @@ class PatientDetails extends React.Component {
         return (
             <div>
                 <Navbar/>
+            <div className="card" style={{width: 22 , margin :0 }}>
+            <img class="card-img-top"
+            src="https://media.geeksforgeeks.org/wp-content/uploads/20190506125816/avt.png"
+                    alt="Card image cap"/>
+            </div>
+			
                 <div className={classes.formouter}> <br/>
                     <h5>Name - {this.state.name}</h5>
                     <h5>Contact - {this.state.contact}</h5>
                     <h5>Patient ID - {this.state.patientid}</h5>
                     <h5>Email - {this.state.email}</h5>
 
-                    <div style={{marginTop: '2em'}}>
-                        <Link to={"/hospital/"+this.state.patientid+"/requirements"}  className={[classes.formsubmit, "btn btn-danger"].join(' ')} style={{backgroundColor: 'red'}}>Add Requirement</Link>
+                    <div style={{marginTop: 2}}>
+                        <Link to={"/hospital/"+this.state.patientid+"/requirements"}  className={[classes.formsubmits, "btn btn-danger"].join(' ')} style={{backgroundColor: 'red'}}>Add Requirement</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;        
-                        <Link to="#" className={[classes.formsubmit, "btn btn-info"].join(' ')} style={{backgroundColor: 'blue'}}>Reports</Link>
+                        <Link to="#" className={[classes.formsubmits, "btn btn-info"].join(' ')} style={{backgroundColor: 'blue', textAlign: 'center'}}>Reports</Link>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <Link to="#" className={[classes.formsubmit, "btn btn-success"].join(' ')} style={{backgroundColor: 'green'}}>Previous Records</Link>
+                        <Link to="#" className={[classes.formsubmits, "btn btn-success"].join(' ')} style={{backgroundColor: 'green'}}>Previous Records</Link>
                     </div>
                     
-                    <h3 style={{marginTop: '2em'}}>PATIENT LOG:</h3><br/>
+                    <h3 style={{marginTop: 2}}>PATIENT LOG:</h3><br/>
                     
                     <Table responsive="md" striped bordered hover variant="dark">
                     <thead>

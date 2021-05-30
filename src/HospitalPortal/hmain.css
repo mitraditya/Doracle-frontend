@@ -1,0 +1,15 @@
+a.nav-link.active, a.navbar-brand.active{
+
+    background-color: white;
+    /* padding: 9px; */
+}
+
+a.navbar-brand, a.nav-link{
+    padding: 6px;
+    color: #1aaf75;
+}
+
+
+.navbar-custom{
+    background-color: black;
+}
