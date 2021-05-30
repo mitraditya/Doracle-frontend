@@ -20,7 +20,7 @@ import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING } from "./types";
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
-    .post("/api/users/login", userData)
+    .post("https://doracle-backend.herokuapp.com/api/users/login", userData)
     .then(res => {
       // Save to localStorage
 
@@ -44,7 +44,7 @@ export const loginUser = userData => dispatch => {
 
 export const HloginUser = userData => dispatch => {
   axios
-    .post("/api/users/hlogin", userData)
+    .post("https://doracle-backend.herokuapp.com/api/users/hlogin", userData)
     .then(res => {
       // Save to localStorage
 
