@@ -5,18 +5,19 @@
   <a href="https://www.mongodb.com/">
     MongoDB
   </a>
-  ,
+  
   <a href ="https://expressjs.com/">
      Express JS
   </a>
-,
+
   <a href="https://reactjs.org/">
     React JS
   </a>
-,
+
   <a href="https://nodejs.org/en/">
     NodeJS
   </a>
+ 
 (MERN STACK)
 </h1>
 
@@ -40,26 +41,25 @@ React is a JavaScript library for building user interfaces.
 
 Clone the project:
 
-bash
+```
 git clone https://github.com/mitraditya/Doracle-frontend.git
 
+```
 
 Run the following command:
 
-bash
+```
 cd Doracle-frontend/
-
-
-Then, run the following command:
-
-bash
 npm i
 
+```
 This will install all the required dependencies to run the project.
 
 In the project directory, you can run:
-bash
+
+```
 npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
