@@ -8,12 +8,14 @@ export class HospitalLanding extends Component {
         return (
             <div>
                 <Navbar/>
-                <Container>
-                <Row>
-                    <Col xs={4}><img src="hospg-min.png" alt="Hospital Vector"/></Col>
-                    <Col><h1>Welcome to the Hospital Dashboard!</h1></Col>
-                </Row>
-                </Container>
+                <div className={classes.formouter}>
+                    <Container fluid>
+                    <Row>
+                        <Col xs={4}><img src="hospg-min.png" alt="Hospital Vector" style={{width:'450px', height: '450px'}}/></Col>
+                        <Col><h1 style={{fontSize: '90px'}}>Welcome to the Hospital Dashboard!</h1></Col>
+                    </Row>
+                    </Container>
+                </div>
             </div>
         )
     }
