@@ -39,10 +39,10 @@ React is a JavaScript library for building user interfaces.
 
 ### Contributors
 
-[Isha Agarwal](https://github.com/isha27255)
-[Aditya Mitra](https://github.com/mitraditya)
-[Tanushree Bhattacharya](https://github.com/tanu272)
-[Ankita Mandal](https://github.com/Ankita1907)
+[Isha Agarwal](https://github.com/isha27255)<br>
+[Aditya Mitra](https://github.com/mitraditya)<br>
+[Tanushree Bhattacharya](https://github.com/tanu272)<br>
+[Ankita Mandal](https://github.com/Ankita1907)<br>
 
 ## Installation
 
