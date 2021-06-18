@@ -36,7 +36,7 @@ class DisplayPatientsTableRow extends React.Component {
       //console.log(this.state.status);
       return (
         <tr>
-          <td><Link to={"/hospital/"+this.props.patientid}  style={{color: "white"}}>{this.props.patientid}</Link></td>
+          <td><Link to={"/hospital/"+this.props.patientid}  style={{color: "black", textDecoration: 'underline'}}>{this.props.patientid}</Link></td>
           <td>{this.props.name}</td>
           <td>{this.state.status}</td>
           <td>{this.props.contact}</td>

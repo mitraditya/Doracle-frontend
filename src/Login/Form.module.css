@@ -1,42 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 .formouter {
-    background-image: linear-gradient(to right,#35dc9b, #f4e2d8);
+    /* background-image: url("https://image.freepik.com/free-vector/people-sitting-hospital-corridor-waiting-doctor-patient-clinic-visit-flat-vector-illustration-medicine-healthcare_74855-8507.jpg") !important; */
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     flex-grow: 0;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     margin-top: 0px !important;
 }
 .formh1 {
-    margin: 0 auto 40px;
+    /* margin: 0 auto 40px; */
     color: rgb(0, 0, 0);
-    font: 20px Helvetica;
-    text-transform: uppercase;
+    font: 20px;
     letter-spacing: 3px;
-    font-weight: 500;
+    font-weight: bold;
+    font-family: "Poppins";
+
 }
 .formlabel {
     position: relative;
     display: block;
 }
-.forminput {
-    font: 18px Helvetica, Arial, sans-serif;
+.forminput, .forminputs {
+    font: 18px;
+    font-family: "Poppins";
     box-sizing: border-box;
     display: block;
     border: none;
-    padding: 20px;
+    padding: 23px;
     width: 300px;
-    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
     font-size: 18px;
     outline: none;
     transition: all 0.2s ease-in-out;
     border-radius: 10px;
 }
+.forminputs{
+    margin-right: 0px !important;
+}
 .forminput::placeholder {
     transition: all 0.2s ease-in-out;
     color: #999;
-    font: 18px Helvetica, Arial, sans-serif;
+    font: 18px;
+    font-family: "Poppins";
 }
 .forminput:focus, .forminput.populated {
     padding-top: 28px;
@@ -50,8 +63,10 @@
     top: 10px;
 }
 .formspan {
-    color: #35dc9b;
-    font: 13px Helvetica, Arial, sans-serif;
+    color: #4481eb;
+    /* font-weight: bold; */
+    font: 16px;
+    font-family: "Poppins";
     position: absolute;
     top: 0px;
     left: 20px;
@@ -61,16 +76,17 @@
 .formsubmit {
     transition: all 0.2s ease-in-out;
     font: 18px Helvetica, Arial, sans-serif;
-    border: none;
-    background: #fff;
-    color: #1aaf75;
+    border: 2px solid #4481eb;
+    background: #4481eb;
+    color: white;
     padding: 16px 40px;
-    width: 140px;
+    width: 150px;
     border-radius: 5px;
+    text-align: center;
 }
 .formsubmit:hover {
     /* background: #109f67; */
-    box-shadow: 0 0 8px rgb(69, 92, 219);
+    box-shadow: 0 0 8px #4481eb;
 }
 
 .formsubmits{
@@ -85,4 +101,286 @@
     height: 60px;
     justify-content: center;
     border-radius: 5px;
+}
+    @media(max-width: 500px)
+    {
+        .xyz{
+            width: 150%;
+            height: 120%;
+            padding: 10px 10px;
+            
+        }
+        h1{
+            margin-top: 10%;
+        }
+      
+    }
+    
+  @media(min-width: 500px) {
+    .xyz{
+        width: 100%;
+        height: auto;
+        padding: 40px 20px;
+    }
+    h1.heads{
+        margin-top: 40%;
+    }
+    .hospital{
+        margin-top: 10%; 
+        width: 50vw;
+   }
+  }
+
+  /* h1{
+      font-family: 'Roboto';
+      font-style: italic;
+      color:#4481eb;
+      font-weight: bold;
+      
+  }
+  */
+  .loginbox {
+	position: absolute;
+	margin-top: -180px;
+    height: 500px;
+	left: 50%;
+	width: 480px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: white;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+}
+.loginboxs {
+	position: absolute;
+	margin-top: 400px;
+    height: 500px;
+	left: 50%;
+	width: 480px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: white;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+}
+.loginboxes {
+	position: absolute;
+	margin-top: 400px;
+    height: 600px;
+	left: 50%;
+	width: 480px;
+	padding: 40px;
+	transform: translate(-50%, -50%);
+	background: white;
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+}
+
+.adbox{
+    width: 400px;
+    padding: 50px;
+    background: white;
+    box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.6);
+	border-radius: 10px;
+    height: 650px;
+    margin-left: 5vw;
+    margin-top: 80px;
+}
+
+
+@media(min-width: 1600px) {
+    
+    .left{
+        text-align: left;
+        margin-top: 40px;
+        margin-left: 280px;
+    }   
+    .lefts{
+        text-align: left;
+        margin-top: 0px !important;
+        margin-left: 200px;
+    }   
+    .l{
+        text-align: left;
+        /* margin-top: 40px;
+        margin-left: 100px; */
+    }
+}
+
+@media(max-width: 500px){
+    .requiredform{
+        margin-left: 80px;
+    }
+    .adstatus{
+        margin-left: 100px;
+        
+    }
+    .btnus{
+        margin-left: 75px;
+    }
+    .left{
+        margin-left: -50px;
+    }
+    img.imgs{
+        display: none;
+    }
+    .addbox{
+        width: 470px;
+        height: 650px;
+    }
+    .g{
+        max-width: 470px;
+        padding-left: 5% !important;
+     padding-right: 0% !important;
+    }
+    .hospital{
+        margin-top: 10%; 
+        width: 480px;
+   }
+   .container{
+       margin-left: 20px;
+   }
+}
+
+/* @media(max-width: 1000px){
+    .container{
+        margin-left: 10vw;
+    }
+} */
+
+
+.full{
+    height: auto;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+img.left{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+td{
+    font-size: 21px;
+}
+th{
+    font-size: 21px;
+}
+
+.g{
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: 10%;
+     padding-right: 10%;
+  /* max-height: 500px; */
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+    
+  .heading{
+      font-family: "Poppins";
+      font-style: italic;
+      color: #4481eb;
+      font-size: 49px;
+      margin-top: 30%;
+  }
+  
+
+
+
+
+
+  .container,.containers {
+    
+    display: flex;
+    transition: 0.3s;
+  }
+  .containers{
+      margin-top: 100px;
+  }
+
+  .card {
+    display: flex;
+   align-self: center;
+   width: fit-content;
+   height: 300px;
+   background: linear-gradient(120deg, #bbcef0 30%, white 30%); 
+   border-radius: 22px;
+   padding: 20px 20px;
+   margin: 50px auto;
+     box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.5);
+   transition: 0.3s;
+ }
+ .cards{
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    height: 500px;
+    background: linear-gradient(120deg, #bbcef0 30%, white 30%); 
+    border-radius: 22px;
+    padding: 20px 20px;
+    margin: 50px auto;
+      box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+ }
+
+ .card:hover {
+    box-shadow: none;
+    cursor: pointer;
+    transform: translateY(2px)
+  }
+  .cards:hover {
+    box-shadow: none;
+    cursor: pointer;
+    transform: translateY(2px)
+  }
+  .card:hover > .profilephoto {
+    opacity: 1
+  }
+  .cards:hover > .profilephotos {
+    opacity: 1
+  }
+  .profilephoto {
+    height: 90px;
+    width: 90px;
+    border-radius: 100px;
+    align-self: center;
+    box-shadow: 0 6px 30px rgba(199, 199, 199, 0.5);
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  .profilephotos{
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+    align-self: center;
+    box-shadow: 0 6px 30px rgba(199, 199, 199, 0.5);
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  .textwrapper {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+  .textwrappers {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    line-height: 1;
+    align-self: center;
+    margin-left: 20px;
+  }
+
+.headss{
+    font-family: "Poppins";
 }

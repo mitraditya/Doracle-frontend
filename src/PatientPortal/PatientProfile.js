@@ -37,8 +37,10 @@ class UpdateProfile extends React.Component {
         return(
             <div>
                 <Navbar/>
+                <div className={classes.loginboxes}>
                 <div className={classes.formouter}>
-                    <h1 className={classes.formh1}>UPDATE YOUR DETAILS:</h1>
+                    <h1 className={classes.formh1}>Update Profile :</h1>
+                    <br></br>
                     <form onSubmit = {this.handleSubmit} >
                         <label className={classes.formlabel}>
                             <input className={classes.forminput} type="text" name="firstname" placeholder="First Name" value={this.state.firstname}  
@@ -63,10 +65,11 @@ class UpdateProfile extends React.Component {
                             onChange={this.handleChange} />
                             <span className={classes.formspan}>Email</span>
                         </label>
-
+                        <br></br>
                         <input className={classes.formsubmit} type="submit" value="Submit" />
                     </form>
                 </div>
+            </div>
             </div>
         )
     }

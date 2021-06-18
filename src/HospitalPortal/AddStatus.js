@@ -31,8 +31,8 @@ class AddPatientStatus extends React.Component {
 
     render(){
         return(
-            <div>
-                <h3>ADD PATIENT STATUS:</h3> <br/>
+            <div className={classes.requiredform}>
+                <h3 className={classes.adstatus}>Add Patient Status:</h3> <br/>
                 {this.state.alert ? <Alerting text={this.state.alert} />: null}
                 <form onSubmit = {this.handleSubmit} >
                     <label className={classes.formlabel} style={{display: 'inline-block'}}>

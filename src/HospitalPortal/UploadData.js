@@ -34,10 +34,13 @@ class UploadData extends React.Component {
 
     render(){
         return(
-            <div>
+            <div className={classes.full}>
                 <Navbar/>
                 <div className={classes.formouter}>
+                    <br></br><br></br>
                     <h1 className={classes.formh1}>UPLOAD PATIENT DATABASE:</h1>
+                    <br></br><br></br>
+                    <img src="https://image.freepik.com/free-vector/list-flat-illustration_183665-75.jpg"></img>
                     <form onSubmit = {this.handleSubmit} >
                         <label className={classes.formlabel}>
                             <input className={classes.forminput} name="csvfile" type="file" placeholder="Select a csv file:" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
@@ -45,6 +48,7 @@ class UploadData extends React.Component {
                         </label>
                         <input className={classes.formsubmit} type="submit" value="Submit" />
                     </form>
+                    <br></br><br></br>
                 </div>
             </div>
         )

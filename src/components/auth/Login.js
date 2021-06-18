@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import classes from '../../Login/Form.module.css';
+import { NavLink } from 'react-router-dom';
 
 class Login extends Component {
   constructor() {
@@ -54,9 +55,18 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className={classes.formouter}>
+      <div className={classes.full}>
+         <nav class="navbar navbar-expand-lg navbar-custom">
+          <NavLink to="/" exact className="navbar-brand">Doracle</NavLink>
+         </nav>
+         {/* <div className={classes.lefts}>
+        <img className={classes.imgs} src="https://image.freepik.com/free-vector/flat-hand-drawn-doctor-injecting-vaccine-patient_23-2148869091.jpg" />
+        </div> */}
+         <div className={classes.loginboxs}>
+        <div className={classes.formouter}>
         <div>
           <h1 className={classes.formh1}>Patient Login</h1>
+          <br></br><br></br>
           <div>
               <form onSubmit = {this.onSubmit} >
                 <label htmlFor="patientID" className={classes.formlabel}>
@@ -73,6 +83,7 @@ class Login extends Component {
                   />
                   <span className={classes.formspan}>Patient ID</span>
                 </label>
+                <br></br>
                 <label htmlFor="password" className={classes.formlabel}>
                   <input
                       onChange={this.onChange}
@@ -87,6 +98,7 @@ class Login extends Component {
                     />
                     <span className={classes.formspan}>Password</span>
                 </label>
+                <br></br>
                 <span className="red-text">
                   {errors.patientID}
                   {errors.patientnotfound}
@@ -102,6 +114,9 @@ class Login extends Component {
           </div>
         </div>
       </div>
+      </div>
+      </div>
+      
     );
   }
 }

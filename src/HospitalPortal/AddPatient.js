@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from '../Login/Form.module.css';
 import Navbar from './Navbar'
+import {Container, Row, Col} from 'react-bootstrap'
+
 
 class AddPatient extends React.Component {
     constructor(props){
@@ -32,10 +34,20 @@ class AddPatient extends React.Component {
     }
     render(){
         return(
-            <div>
+            <div className={classes.full}>
                 <Navbar/>
+                {/* <div className={classes.l}>
+                <img src="https://image.freepik.com/free-vector/detailed-doctors-nurses-collection-illustration_23-2148920309.jpg"></img> */}
+                
                 <div className={classes.formouter}>
-                    <h1 className={classes.formh1}>ADD A NEW PATIENT:</h1>
+                {/* <div className={classes.addbox}> */}
+                <Container fluid>
+                    <Row>
+                    <Col xs={8}><img src="https://image.freepik.com/free-vector/hand-drawn-doctors-nurses_23-2148917433.jpg" alt="Hospital Vector" className={classes.xyz} /></Col>
+                    <Col>
+                    <div className={classes.adbox}>
+                    <h1 className={classes.formh1}>Add New Patient:</h1>
+                    <br></br>
                     <form onSubmit = {this.handleSubmit} >
 
                         <label className={classes.formlabel}>
@@ -61,10 +73,18 @@ class AddPatient extends React.Component {
                             onChange={this.handleChange} />
                             <span className={classes.formspan}>Email</span>
                         </label>
-
+                        <br></br>
                         <input className={classes.formsubmit} type="submit" value="Submit" />
                     </form>
                 </div>
+                    </Col>
+                    </Row>
+                </Container>
+                </div>
+                {/* </div> */}
+                
+                {/* </div> */}
+                
             </div>
         )
     }

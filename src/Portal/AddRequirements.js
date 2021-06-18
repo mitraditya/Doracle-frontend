@@ -30,22 +30,25 @@ class AddRequirements extends React.Component {
     render(){
         console.log("Render called");
         return(
-            <div style={{marginTop: '2vh'}}>
-                <h1>ADD PATIENT REQUIREMENTS:</h1> <br/>
+            <div className={classes.requiredform}>
+                <h3 className={classes.adstatus}>Add Patient Requirements :</h3> <br/>
                 <form onSubmit = {this.handleSubmit} >
-                    <label className={classes.formlabel}>
-                        <input className={classes.forminput} type="text" name="requirements" placeholder="Requirements" value={this.state.requirements}  
+                    <label className={classes.formlabel} style={{display: 'inline-block'}}>
+                        <input className={classes.forminput} style={{justifyContent: 'center'}} type="text" name="requirements" placeholder="Requirements" value={this.state.requirements}  
                         onChange={this.handleChange} />
                         <span className={classes.formspan}>Requirements</span>
                     </label>
-
-                    <label className={classes.formlabel}>
+                    <br></br>
+                    <label className={classes.formlabel} style={{display: 'inline-block'}}>
                         <input className={classes.forminput} type="text" name="info" placeholder="Info" value={this.state.info}  
                         onChange={this.handleChange} />
                         <span className={classes.formspan}>Info</span>
                     </label>
-
+                    <br></br>
+                    <div className={classes.btnus}> 
                     <input className={classes.formsubmit} type="submit" value="Submit" />
+                    </div>
+                <br></br><br></br>
                 </form>
             </div>
         )

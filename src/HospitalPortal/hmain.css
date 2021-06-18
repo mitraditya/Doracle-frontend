@@ -1,15 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 a.nav-link.active, a.navbar-brand.active{
 
-    background-color: white;
-    /* padding: 9px; */
+    /* background-color: white; */
+    /* text-decoration: underline; */
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    padding: 9px;
 }
 
 a.navbar-brand, a.nav-link{
-    padding: 6px;
-    color:#1aaf75;
+    margin: 0px 40px;
+    padding: 9px;
+    color: #104e8b;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: bold;
+}
+/* button.btn.btn-large.waves-effect.waves-light.hoverable.blue.accent-3{
+    float: right;
+} */
+a.navbar-brand{
+    background-color: white;
+    padding: 9px;
+    font-family: "Poppins";
+    font-weight: bold;
 }
 
 
 .navbar-custom{
-    background-color: black;
+    background-color: #4481eb;
+}
+
+.btn{
+    /* margin-right: 0px; */
+    font-size: 20px;
+    font-weight: bold;
+    /* float: right; */
+}
+
+span.navbar-toggler-icon{
+    color: white;
+}
+
+.custom-toggler.navbar-toggler{
+    border-color: white;
+    color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    
 }

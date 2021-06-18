@@ -30,8 +30,11 @@ class PatientRequirement extends React.Component {
 
             <div>
                 <Navbar/><br/>
+                <div className="container">
+                    <br></br>
                 <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
-                    <h1>REQUIREMENT LOG:</h1>
+                    <h1>Your Pharmacy Requirements :</h1>
+                    <br></br><br></br>
                     <Table responsive="md" striped bordered hover>
                     <thead>
                         <tr>
@@ -43,6 +46,7 @@ class PatientRequirement extends React.Component {
                     </thead>
                     <tbody>{display}</tbody>
                     </Table>
+                </div>
                 </div>
             </div>
         )

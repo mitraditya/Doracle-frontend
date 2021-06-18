@@ -5,6 +5,7 @@ import DisplayPatientsTableRow from './DisplayAllPatientsTableRow'
 import Navbar from './Navbar'
 import classes from '../Login/Form.module.css';
 
+
 class DisplayPatients extends React.Component {
   state = { AllPatients: [] };
   componentDidMount() {
@@ -27,9 +28,11 @@ class DisplayPatients extends React.Component {
       <div>
         <Navbar/>
         <div className={classes.formouter} style={{alignItems: 'normal', justifyContent: 'normal'}}><br/>
-        <h1>LIST OF PATIENTS:</h1>
-        <div style={{paddingLeft: '10%', paddingRight: '10%'}}>
-          <Table responsive="md" striped bordered hover variant="dark">
+        <br></br><br></br>
+        <h1 className={classes.headss}>Patients Catalogue</h1>
+        <br></br><br></br>
+        <div className={classes.g}>
+          <table className="table table-striped" responsive="md">
             <thead>
               <tr>
                 <th>Patient ID</th>
@@ -39,7 +42,7 @@ class DisplayPatients extends React.Component {
               </tr>
             </thead>
             <tbody>{display}</tbody>
-          </Table>
+          </table>
         </div>
         </div>
       </div>

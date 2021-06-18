@@ -39,8 +39,10 @@ class ResetPassword extends React.Component {
         return(
             <div>
                 <Navbar/>
+                <div className={classes.loginboxs}>
                 <div className={classes.formouter}>
-                    <h1 className={classes.formh1}>RESET YOUR PASSWORD:</h1>
+                    <h1 className={classes.formh1}>Reset Password </h1>
+                    <br></br>
                     <form onSubmit = {this.handleSubmit} >
                     
                         <label className={classes.formlabel}>
@@ -48,16 +50,17 @@ class ResetPassword extends React.Component {
                             onChange={this.handleChange} />
                             <span className={classes.formspan}>New Password</span>
                         </label>
-
+                        <br></br>
                         <label className={classes.formlabel}>
                             <input className={classes.forminput} type="password" name="confirmpassword" placeholder="Confirm Password" value= {this.state.confirmpassword} 
                             onChange={this.handleChange} />
                             <span className={classes.formspan}>Confirm Password</span>
                         </label>
-
+                        <br></br>
                         <input className={classes.formsubmit} type="submit" value="Confirm" />
                     </form>
                 </div>
+            </div>
             </div>
         )
     }
